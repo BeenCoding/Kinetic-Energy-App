@@ -1,6 +1,8 @@
+package com.company;
+
 import java.util.Scanner;
 
-public class KineticEnergyApp {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -13,7 +15,7 @@ public class KineticEnergyApp {
                 "One gallon of diesel is about 8 pounds and if a truck got 8 miles per gallon, then that would be about 1 pound lost \n" +
                 "per mile driven.\n\n"
 
-+                "    Kinetic energy, measured in kilojoules (KJ), is the amount of force due to an object's speed.  Here you can enter \n" +
+                +                "    Kinetic energy, measured in kilojoules (KJ), is the amount of force due to an object's speed.  Here you can enter \n" +
                 "the weight (in pounds) and speed (MPH) for two different objects to compare the kinetic energy  between them.");
         // Trucks can legally weigh 80,000 pounds.  However, many trucks aren't at 80,000 because if a driver leaves a customer with a gross weight of
         // 80,000 pounds they will be reducing their weight by going down the road using fuel.  One gallon of diesel is about 8 pounds and if a truck
@@ -58,40 +60,40 @@ public class KineticEnergyApp {
         }
 
         if(userInput == 2) {
-                //   Scanner scanner = new Scanner(System.in);
+            //   Scanner scanner = new Scanner(System.in);
 
-                System.out.println("\nPlease enter the number of pounds for the first object: ");
-                double inputFirstPounds = scanner.nextDouble();
+            System.out.println("\nPlease enter the number of pounds for the first object: ");
+            double inputFirstPounds = scanner.nextDouble();
 
-                // Validate the entry.
-                while (inputFirstPounds <= 0)  {
-                    System.out.println("\nInvalid entry.  Please enter number greater than zero.");
-                }
+            // Validate the entry.
+            while (inputFirstPounds <= 0)  {
+                System.out.println("\nInvalid entry.  Please enter number greater than zero.");
+            }
 
-                System.out.println("\nPlease enter the MPH for the first object: ");
-                double inputFirstSpeed = scanner.nextDouble();
+            System.out.println("\nPlease enter the MPH for the first object: ");
+            double inputFirstSpeed = scanner.nextDouble();
 
-                while (inputFirstSpeed <= 0)  {
-                    System.out.println("\nInvalid entry.  Please enter number greater than zero.");
-                }
+            while (inputFirstSpeed <= 0)  {
+                System.out.println("\nInvalid entry.  Please enter number greater than zero.");
+            }
 
-                System.out.println("\nPlease enter the number of pounds for the second object: ");
-                double inputSecondPounds = scanner.nextDouble();
+            System.out.println("\nPlease enter the number of pounds for the second object: ");
+            double inputSecondPounds = scanner.nextDouble();
 
-                // Validate the entry.
-                while (inputSecondPounds <= 0)  {
-                    System.out.println("\nInvalid entry.  Please enter number greater than zero.");
-                }
+            // Validate the entry.
+            while (inputSecondPounds <= 0)  {
+                System.out.println("\nInvalid entry.  Please enter number greater than zero.");
+            }
 
-                System.out.println("\nPlease enter the MPH for the second object: ");
-                double inputSecondSpeed = scanner.nextDouble();
+            System.out.println("\nPlease enter the MPH for the second object: ");
+            double inputSecondSpeed = scanner.nextDouble();
 
-                while (inputSecondSpeed <= 0)  {
-                    System.out.println("\nInvalid entry.  Please enter number greater than zero.");
-                }
+            while (inputSecondSpeed <= 0)  {
+                System.out.println("\nInvalid entry.  Please enter number greater than zero.");
+            }
             scanner.close();
 
-                optionTwo(inputFirstPounds, inputFirstSpeed, inputSecondPounds, inputSecondSpeed);
+            optionTwo(inputFirstPounds, inputFirstSpeed, inputSecondPounds, inputSecondSpeed);
 
         }
 
@@ -132,7 +134,7 @@ public class KineticEnergyApp {
                 "\nSpeed:           %,.2f MPH " +
                 "\nKinetic Energy:  %,.2f KJ", firstEnterPounds, firstEnterMPH, firstKineticEnergy));
 
-       // return firstKineticEnergy();
+        // return firstKineticEnergy();
     }
 
     public static void optionTwo(double enterFirstPounds, double enterFirstMPH, double enterSecondPounds, double enterSecondMPH) {
@@ -142,7 +144,7 @@ public class KineticEnergyApp {
 
         double firstKineticEnergy = (((0.5 * firstMassKG) * (firstVelocity * firstVelocity)) / 1000);
 
-        System.out.println(String.format("\n-----\n\nSecond Object: \n\nWeight:          %,.2f pounds " +
+        System.out.println(String.format("\n-----\n\nFirst Object: \n\nWeight:          %,.2f pounds " +
                 "\nSpeed:           %,.2f MPH " +
                 "\nKinetic Energy:  %,.2f KJ", enterFirstPounds, enterFirstMPH, firstKineticEnergy));
 
